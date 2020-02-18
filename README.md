@@ -90,7 +90,23 @@ step3 修改颜色
 
 ## effect3 ShadeFlag 摇晃的旗帜
 
+## effect3 ShadeFlag 摇晃的旗帜
+
 ![]()
 
-step1 
+1.1新建postion节点space选择object，position out 给一个新建的split节点
+
+1.2新建UV节点，out 给一个 新建的split节点
+
+1.3将上面的postion出来的split out给以mutiply *10 ，再给Add节点 +0，再out给一个sine 
+
+1.4新建time节点将time，mutiply 10 ，out给上面的add节点
+
+1.5 拷贝1.1 的postion节点和split 节点，将split out的r g 连上 一个新的combine节点的r g，out 的rgb点给pbr的postion
+
+1.6 将1.2的uv out 的r 和1.3的add节点 ，去mutiply结果 ，再mutiply0.1
+
+1.7 将1.5 的split 节点out的 b，与1.6 的out ，add起来，out结果给 1.5 的combine节点的b in
+
+
 
